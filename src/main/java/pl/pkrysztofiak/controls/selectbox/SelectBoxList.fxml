@@ -21,13 +21,13 @@
                         <Region maxHeight="-Infinity" maxWidth="-Infinity" styleClass="clear-icon" visible="false" />
                      </children>
                   </StackPane>
-                  <TextField text="Jeden" HBox.hgrow="ALWAYS" />
+                  <TextField fx:id="filterTextField" HBox.hgrow="ALWAYS" />
                   <Label styleClass="search-counter" text="10/120" />
                </children>
             </HBox>
          </children>
       </StackPane>
-      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0">
+      <ListView fx:id="listView">
          <VBox.margin>
             <Insets />
          </VBox.margin>

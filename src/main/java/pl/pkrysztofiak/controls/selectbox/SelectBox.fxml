@@ -10,7 +10,7 @@
    <children>
       <StackPane styleClass="item-cell" HBox.hgrow="ALWAYS">
          <children>
-            <Label text="Jetbrains Mono" />
+            <Label fx:id="selectedItemLabel" text="Jetbrains Mono" />
          </children></StackPane>
       <StackPane fx:id="arrowButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="arrow-button">
          <children>

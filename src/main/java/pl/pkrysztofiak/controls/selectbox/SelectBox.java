@@ -3,9 +3,11 @@ package pl.pkrysztofiak.controls.selectbox;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.function.Function;
 
 import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.ObjectPropertyBase;
+import javafx.beans.value.ChangeListener;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -15,6 +17,7 @@ import javafx.geometry.Bounds;
 import javafx.geometry.HPos;
 import javafx.geometry.Insets;
 import javafx.geometry.VPos;
+import javafx.scene.control.Label;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
@@ -33,6 +36,10 @@ public class SelectBox<T> extends Region implements Initializable {
     @FXML
     private StackPane arrowButton;
 
+    @FXML
+    private Label selectedItemLabel;
+
+    
     private final ObjectProperty<ObservableList<T>> itemsProperty = new ObjectPropertyBase<ObservableList<T>>() {
 
         @Override
@@ -51,6 +58,7 @@ public class SelectBox<T> extends Region implements Initializable {
         }
     };
 
+
     public SelectBox() {
         this(FXCollections.observableArrayList());
     }
@@ -65,10 +73,13 @@ public class SelectBox<T> extends Region implements Initializable {
         registerListeners();
     }
 
+    public void setStringValueFactory(Function<T, String> toStringFunction) {
+        selectBoxList.setStringValueFactory(toStringFunction);
+    }
+
     private void loadFxml() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("SelectBox.fxml"));
         fxmlLoader.setController(this);
-
         try {
             root = fxmlLoader.load();
         } catch (IOException e) {
@@ -81,6 +92,12 @@ public class SelectBox<T> extends Region implements Initializable {
             Bounds localToScreen = localToScreen(getBoundsInLocal());
             popup.show(this, localToScreen.getMinX(), localToScreen.getMaxY() - 1);
             popup.setAutoHide(true);
+        });
+
+        selectBoxList.selectedItemProperty().addListener((ChangeListener<T>) (observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                selectedItemLabel.setText(newValue.toString());
+            }
         });
     }
 
@@ -97,6 +114,13 @@ public class SelectBox<T> extends Region implements Initializable {
     @Override
     protected double computeMinHeight(double width) {
         return root.minHeight(width);
+    }
+
+    @Override
+    protected double computePrefWidth(double height) {
+        double selectBoxListPrefWidth = selectBoxList.prefWidth(height);
+        double prefWidth = super.computePrefWidth(height);
+        return Math.max(prefWidth, selectBoxListPrefWidth);
     }
 
     @Override
