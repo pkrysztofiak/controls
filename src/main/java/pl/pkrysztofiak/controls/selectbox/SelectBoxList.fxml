@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<fx:root styleClass="select-box-list" stylesheets="@SelectBoxList.css" type="VBox" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane styleClass="search-pane">
+         <children>
+            <HBox alignment="CENTER_LEFT" styleClass="search-box">
+               <children>
+                  <StackPane styleClass="search-icon-box">
+                     <children>
+                        <Region maxHeight="-Infinity" maxWidth="-Infinity" styleClass="search-icon" />
+                        <Region maxHeight="-Infinity" maxWidth="-Infinity" styleClass="clear-icon" visible="false" />
+                     </children>
+                  </StackPane>
+                  <TextField text="Jeden" HBox.hgrow="ALWAYS" />
+                  <Label styleClass="search-counter" text="10/120" />
+               </children>
+            </HBox>
+         </children>
+      </StackPane>
+      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0">
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </ListView>
+   </children>
+</fx:root>

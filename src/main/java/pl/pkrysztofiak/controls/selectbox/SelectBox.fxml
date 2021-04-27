@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.StackPane?>
 
-
-<HBox minHeight="25.0" styleClass="select-box" stylesheets="@SelectBox.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<HBox styleClass="select-box" stylesheets="@SelectBox.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <StackPane styleClass="item-cell" HBox.hgrow="ALWAYS" />
-      <StackPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="arrow-button">
+      <StackPane styleClass="item-cell" HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="Jetbrains Mono" />
+         </children></StackPane>
+      <StackPane fx:id="arrowButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="arrow-button">
          <children>
             <Region maxHeight="-Infinity" maxWidth="-Infinity" styleClass="arrow" />
          </children>

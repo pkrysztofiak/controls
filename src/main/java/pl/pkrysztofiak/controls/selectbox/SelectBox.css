@@ -1,31 +1,28 @@
 .select-box {
     -fx-background-color: rgb(100, 100, 100), rgb(60, 63, 65);
     -fx-background-insets: 0, 1;
-    -fx-background-radius: 3px, 3px, 2px, 1px;
-    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
-    -fx-text-fill: -fx-text-base-color;
+    -fx-padding: 1 0 0 0;
     -fx-alignment: CENTER;
     -fx-content-display: LEFT;
+    -fx-font-family: "Roboto";
 }
 
-.select-box > .arrow-button > .arrow {
-	-fx-background-color: rgb(154, 157, 161);
-    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* 2 4 2 4 */
-    -fx-shape: "M 0 0 h 7 l -3.5 4 z";
-}
-
-.select-box {
-    -fx-padding: 0;
+.select-box .label {
+	-fx-text-fill: rgb(187, 187, 187);
 }
 
 .select-box > .arrow-button {
     -fx-background-radius: 0 3 3 0, 0 2 2 0, 0 1 1 0;
-    -fx-padding: 0.5em 0.667em 0.5em 0.833333em; /* 6 8 6 10 */
+    -fx-padding: 0.5em 0.667em 0.5em 0.667em; /* 6 8 6 8 */
 }
 
+.select-box > .arrow-button > .arrow {
+	-fx-background-color: rgb(154, 157, 161);
+    -fx-padding: 0.20833em 0.416667em 0.20833em 0.416667em; /* 2.5 5 2.5 5 */
+    -fx-shape: "M7 10l5 5 5-5H7z";
+}
+
+
 .select-box > .item-cell {
-    -fx-background: transparent;
-    -fx-background-color: transparent;
-    -fx-text-fill: -fx-text-base-color;
     -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* 4 8 4 8 */
 }

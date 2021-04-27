@@ -1,0 +1,83 @@
+.select-box-list {
+	-fx-background-color: rgb(100, 100, 100), rgb(60, 63, 65);
+    -fx-background-insets: 0, 1;
+}
+
+.select-box .label {
+	-fx-font-family: "Roboto";
+}
+
+.select-box-list .label {
+	
+}
+
+.select-box-list > .search-pane {
+	-fx-padding: 0.333333em; /* {4 4 4 4} */
+}
+
+.search-box {
+	-fx-background-color: rgb(100, 100, 100), rgb(69, 73, 74);
+    -fx-background-insets: 0, 1;
+    -fx-padding: 0 0.333333em 0 0;
+}
+
+.search-icon-box {
+	-fx-padding: 0em 0.333333em 0em 0.666667em; /* {6 8 6 8} */	
+}
+
+.search-icon {
+	-fx-shape: "m 10.84014,18.398799 c 1.47486,0 2.849162,-0.435754 4.005586,-1.173184 L 18.935112,21.315 21.315,18.935112 17.225615,14.862486 c 0.73743,-1.173184 1.173184,-2.530726 1.173184,-4.005587 0,-4.1731839 -3.368715,-7.541899 -7.5419,-7.541899 -4.1731839,0 -7.541899,3.3687151 -7.541899,7.541899 0,4.173185 3.3687151,7.5419 7.52514,7.5419 z M 10.8569,6.6669553 c 2.31285,0 4.189945,1.8770947 4.189945,4.1899437 0,2.31285 -1.877095,4.189945 -4.189945,4.189945 -2.312849,0 -4.1899437,-1.877095 -4.1899437,-4.189945 0,-2.312849 1.8770947,-4.1899437 4.1899437,-4.1899437 z";
+	-fx-padding: 0.666667em; /* {8} */
+	-fx-background-color: rgb(154, 157, 161);
+}
+
+.clear-icon {
+	-fx-shape: "M 14.404526,8.0056575 12.005658,10.407924 9.595474,8.0056575 8,9.6033914 10.410184,12.005658 8.0113154,14.407924 9.606789,16.005657 12.005658,13.603391 14.404526,16.005657 16,14.407924 13.601132,12.005658 16,9.6033914 Z";
+	-fx-padding: 0.333333em;
+	-fx-background-color: rgb(154, 157, 161);
+}
+
+.search-box > .text-field {
+	-fx-background-color: transparent; 
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.25em 0.416667em  0.333333em 0.416667em; /* 3 5 4 5 */
+    -fx-text-fill: rgb(187, 187, 187);
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-cursor: text;
+    -fx-accent: rgb(75, 110, 175);
+}
+
+.search-counter {
+	-fx-padding: 0 0.333333em 0 0.333333em; /* { 0 4 0 4 } */
+	-fx-background-color: rgb(154, 157, 161);
+	-fx-background-radius: 2px;
+	-fx-text-fill: rgb(60, 63, 65);
+	-fx-font-size: 0.833333em;
+	-fx-font-weight: bold;
+}
+
+.select-box-list > .list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0, 1;
+}
+.select-box-list > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-padding: 4 0 4 5;
+    /* No alternate highlighting */
+    -fx-background: rgb(60, 63, 65);
+    -fx-font-family: "Roboto";
+    -fx-text-fill: rgb(187, 187, 187);
+}
+.select-box-list > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
+    -fx-background-color: rgb(75, 110, 175);
+}
+.select-box-list  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
+	-fx-background-color: transparent;
+}
+
+.select-box-list  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background-color: rgb(75, 110, 175);
+}
+.select-box-list > .list-view > .placeholder > .label {
+    -fx-text-fill: red;
+}
