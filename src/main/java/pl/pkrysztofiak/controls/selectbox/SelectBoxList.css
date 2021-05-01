@@ -33,7 +33,7 @@
 
 .clear-icon {
 	-fx-shape: "M 14.404526,8.0056575 12.005658,10.407924 9.595474,8.0056575 8,9.6033914 10.410184,12.005658 8.0113154,14.407924 9.606789,16.005657 12.005658,13.603391 14.404526,16.005657 16,14.407924 13.601132,12.005658 16,9.6033914 Z";
-	-fx-padding: 0.333333em;
+	-fx-padding: 0.333333em; 
 	-fx-background-color: rgb(154, 157, 161);
 }
 
@@ -61,6 +61,7 @@
     -fx-background-color: transparent;
     -fx-background-insets: 0, 1;
 }
+
 .select-box-list > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
     -fx-padding: 4 0 4 5;
     /* No alternate highlighting */
@@ -68,9 +69,11 @@
     -fx-font-family: "Roboto";
     -fx-text-fill: rgb(187, 187, 187);
 }
+
 .select-box-list > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover {
     -fx-background-color: rgb(75, 110, 175);
 }
+
 .select-box-list  > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected {
 	-fx-background-color: transparent;
 }

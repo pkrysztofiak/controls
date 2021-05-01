@@ -1,4 +1,4 @@
-package pl.pkrysztofiak.controls.selectbox;
+package pl.pkrysztofiak.controls.selectboxcontrol;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,12 +22,14 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Popup;
+import pl.pkrysztofiak.controls.selectbox.SelectBoxList;
 
 public class SelectBox<T> extends Region implements Initializable {
 
     private HBox root;
 
     private final ObservableList<T> items = FXCollections.observableArrayList();
+
     private final SelectBoxList<T> selectBoxList = new SelectBoxList<>(items);
 
     private final Popup popup = new Popup();
@@ -38,7 +40,6 @@ public class SelectBox<T> extends Region implements Initializable {
     @FXML
     private Label selectedItemLabel;
 
-    
     private final ObjectProperty<ObservableList<T>> itemsProperty = new ObjectPropertyBase<ObservableList<T>>() {
 
         @Override
@@ -57,7 +58,6 @@ public class SelectBox<T> extends Region implements Initializable {
         }
     };
 
-
     public SelectBox() {
         this(FXCollections.observableArrayList());
     }
@@ -68,9 +68,6 @@ public class SelectBox<T> extends Region implements Initializable {
         getChildren().add(root);
 
         popup.getContent().setAll(selectBoxList);
-        //        popup.show(this, 100, 100);
-        //        popup.hide();
-        items.stream().forEach(item -> selectedItemLabel.setText(item.toString()));
 
         registerListeners();
     }

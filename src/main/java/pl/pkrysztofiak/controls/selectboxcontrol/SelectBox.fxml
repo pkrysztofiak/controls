@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.SVGPath?>
+
+<HBox style="-fx-font-size: 12;" styleClass="select-box" stylesheets="@SelectBox.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <StackPane layoutX="46.0" layoutY="14.0" styleClass="clear-button">
+         <children>
+            <Group>
+               <children>
+                  <SVGPath content="M 5.66,0 3.54,2.12 1.41,0 0,1.41 2.13,3.53 0.01,5.65 1.42,7.06 3.54,4.94 5.66,7.06 7.07,5.65 4.95,3.53 7.07,1.41 Z" styleClass="clear-icon" />
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+      <StackPane layoutX="10.0" layoutY="10.0" styleClass="item" HBox.hgrow="ALWAYS">
+         <children>
+            <Label text="JetBrains Mono" textFill="WHITE" />
+         </children>
+      </StackPane>
+      <StackPane layoutX="210.0" layoutY="10.0" styleClass="expand-button">
+         <children>
+            <Group>
+               <children>
+                  <SVGPath content="M 0,0 5,5 10,0 Z" styleClass="expand-icon" />
+               </children>
+            </Group>
+         </children>
+      </StackPane>
+   </children>
+</HBox>

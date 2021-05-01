@@ -1,0 +1,57 @@
+.select-box-list {
+	-fx-background-color: rgb(100, 100, 100), rgb(69, 73, 74);
+    -fx-background-insets: 0, 1;
+}
+
+.select-box-list .icon-button {
+	-fx-min-width: 2em;
+	-fx-min-height: 2em;
+	
+	-fx-pref-width: 2em;
+	-fx-pref-height: 2em;
+	
+	-fx-max-width: 2em;
+	-fx-max-height: 2em;
+}
+
+.select-box-list .icon-button .icon {
+	-fx-fill: rgb(154, 157, 161);
+}
+
+.select-box-list > .filter-pane {
+	-fx-padding: 0.333333em 0.333333em 0 0.333333em; /* {4 4 0 4} */
+}
+
+.select-box-list > .filter-pane > .filter-box {
+	-fx-background-color: rgb(100, 100, 100), rgb(69, 73, 74);
+    -fx-background-insets: 0, 1;
+    -fx-padding: 0 0.333333em 0 0;
+}
+
+.select-box-list > .filter-pane > .filter-box .text-field {
+	-fx-background-color: transparent; 
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-padding: 0.25em 0.416667em  0.333333em 0.416667em; /* 3 5 4 5 */
+    -fx-text-fill: rgb(187, 187, 187);
+    -fx-prompt-text-fill: derive(-fx-control-inner-background,-30%);
+    -fx-cursor: text;
+    -fx-accent: rgb(75, 110, 175);
+}
+
+.select-box-list .list-view {
+	-fx-background-color: transparent;
+}
+
+.filter-box-list-pane {
+	-fx-padding: 0 0.333333em 0.333333em 0.333333em; /* {0 4 4 4} */
+}
+
+.filter-box-list {
+	-fx-background-color: rgb(100, 100, 100), rgb(69, 73, 74);
+    -fx-background-insets: 0 , 0 1 1 1;
+}
+
+.select-box-list .check-box {
+	
+}

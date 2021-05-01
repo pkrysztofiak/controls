@@ -28,17 +28,16 @@ public class App extends Application {
         //        primaryStage.setScene(scene);
         //        primaryStage.show();
 
-        SelectBox<String> selectBox = new SelectBox<>(FXCollections.observableArrayList("Jeden", "Dwa", "Trzy"));
+        SelectBox<String> selectBox = new SelectBox<>(
+                FXCollections.observableArrayList("Jeden", "Dwa", "Trzydafdasfsdadfsdaffsdafdsfdsa"));
 
         StackPane stackPane = new StackPane(selectBox);
         stackPane.setPrefSize(400, 400);
         stackPane.setStyle("-fx-background-color: rgb(60, 63, 65)");
         primaryStage.setScene(new Scene(stackPane));
         primaryStage.show();
-
         //        TableColumn<String, Employee> tableColumn = new TableColumn<>();
         //        tableColumn.setCellValueFactory(value);
-
     }
 }
 

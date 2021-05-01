@@ -1,0 +1,12 @@
+.check-box > .box {
+	-fx-background-color: rgb(100, 100, 100), rgb(69, 73, 74);
+    -fx-background-insets: 0, 1;
+    -fx-text-fill: -fx-text-base-color;
+    -fx-alignment: CENTER;
+    -fx-content-display: LEFT;
+    -fx-background-radius: 0.166667em; /* 2 2 2 2 */
+    -fx-padding: 0.166667em 0.166667em 0.25em 0.25em; /* 2 2 3 3 */
+}
+
+.check-box {
+}
