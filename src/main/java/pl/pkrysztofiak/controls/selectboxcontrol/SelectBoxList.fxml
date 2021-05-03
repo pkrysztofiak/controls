@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ListView?>
@@ -43,9 +42,9 @@
       <StackPane prefHeight="150.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
          <children>
             <ListView />
-            <StackPane prefHeight="150.0" prefWidth="200.0">
+            <StackPane styleClass="filter-box-list-pane">
                <children>
-                  <VBox>
+                  <VBox styleClass="filter-box-list">
                      <children>
                         <CheckBox mnemonicParsing="false" text="Starts with" />
                         <CheckBox mnemonicParsing="false" text="Match whole words" />
@@ -53,9 +52,6 @@
                      </children>
                   </VBox>
                </children>
-               <padding>
-                  <Insets bottom="8.0" left="8.0" right="8.0" />
-               </padding>
             </StackPane>
          </children>
       </StackPane>
